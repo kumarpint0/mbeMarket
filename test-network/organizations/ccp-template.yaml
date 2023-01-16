@@ -1,0 +1,35 @@
+---
+name: test-network-org${ORG}
+version: 1.0.0
+client:
+  organization: Org${ORG}
+  connection:
+    timeout:
+      peer:
+        endorser: '300'
+organizations:
+  Org${ORG}:
+    mspid: Org${ORG}MSP
+    peers:
+    - peer0.org${ORG}.mbemarket.com
+    certificateAuthorities:
+    - ca.org${ORG}.mbemarket.com
+peers:
+  peer0.org${ORG}.mbemarket.com:
+    url: grpcs://peer0.org${ORG}.mbemarket.com:${P0PORT}
+    tlsCACerts:
+      pem: |
+          ${PEERPEM}
+    grpcOptions:
+      ssl-target-name-override: peer0.org${ORG}.mbemarket.com
+      hostnameOverride: peer0.org${ORG}.mbemarket.com
+certificateAuthorities:
+  ca.org${ORG}.mbemarket.com:
+    url: https://ca.org${ORG}.mbemarket.comt:${CAPORT}
+    caName: ca-org${ORG}
+    tlsCACerts:
+      pem: 
+        - |
+          ${CAPEM}
+    httpOptions:
+      verify: false
