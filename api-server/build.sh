@@ -1,3 +1,3 @@
-docker build -t aditya/node-app .
+docker build -t pintu/node-app .
 
-docker service update hlf_nodeapp --force
+docker service update mbemarket_nodeapp --force

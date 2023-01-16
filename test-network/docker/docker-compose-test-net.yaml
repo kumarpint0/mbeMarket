@@ -6,14 +6,14 @@
 version: "3"
 
 volumes:
-  ordererexamplecom:
-  orderer2examplecom:
-  orderer3examplecom:
-  orderer4examplecom:
-  orderer5examplecom:
-  peer0org1examplecom:
-  peer0org2examplecom:
-  peer0org3examplecom:
+  orderermbemarketcom:
+  orderer2mbemarketcom:
+  orderer3mbemarketcom:
+  orderer4mbemarketcom:
+  orderer5mbemarketcom:
+  peer0org1mbemarketcom:
+  peer0org2mbemarketcom:
+  peer0org3mbemarketcom:
 
 networks:
   test:
@@ -21,7 +21,7 @@ networks:
       name: test
 
 services:
-  ordererexamplecom:
+  orderermbemarketcom:
     deploy:
       placement:
         constraints:
@@ -49,17 +49,17 @@ services:
     working_dir: /opt/gopath/src/github.com/hyperledger/fabric
     command: orderer
     volumes:
-      - /home/ubuntu/hlf-docker-swarm/test-network/system-genesis-block/genesis.block:/var/hyperledger/orderer/orderer.genesis.block
-      - /home/ubuntu/hlf-docker-swarm/test-network/organizations/ordererOrganizations/mbemarket.com/orderers/orderer.mbemarket.com/msp:/var/hyperledger/orderer/msp
-      - /home/ubuntu/hlf-docker-swarm/test-network/organizations/ordererOrganizations/mbemarket.com/orderers/orderer.mbemarket.com/tls/:/var/hyperledger/orderer/tls
-      - ordererexamplecom:/var/hyperledger/production/orderer
+      - /home/ravi/mbeMarket/test-network/system-genesis-block/genesis.block:/var/hyperledger/orderer/orderer.genesis.block
+      - /home/ravi/mbeMarket/test-network/organizations/ordererOrganizations/mbemarket.com/orderers/orderer.mbemarket.com/msp:/var/hyperledger/orderer/msp
+      - /home/ravi/mbeMarket/test-network/organizations/ordererOrganizations/mbemarket.com/orderers/orderer.mbemarket.com/tls/:/var/hyperledger/orderer/tls
+      - orderermbemarketcom:/var/hyperledger/production/orderer
     ports:
       - 7050:7050
     networks:
       test:
         aliases:
           - orderer.mbemarket.com
-  orderer2examplecom:
+  orderer2mbemarketcom:
     deploy:
       placement:
         constraints:
@@ -87,10 +87,10 @@ services:
     working_dir: /opt/gopath/src/github.com/hyperledger/fabric
     command: orderer
     volumes:
-      - /home/ubuntu/hlf-docker-swarm/test-network/system-genesis-block/genesis.block:/var/hyperledger/orderer/orderer.genesis.block
-      - /home/ubuntu/hlf-docker-swarm/test-network/organizations/ordererOrganizations/mbemarket.com/orderers/orderer2.mbemarket.com/msp:/var/hyperledger/orderer/msp
-      - /home/ubuntu/hlf-docker-swarm/test-network/organizations/ordererOrganizations/mbemarket.com/orderers/orderer2.mbemarket.com/tls/:/var/hyperledger/orderer/tls
-      - orderer2examplecom:/var/hyperledger/production/orderer
+      - /home/ravi/mbeMarket/test-network/system-genesis-block/genesis.block:/var/hyperledger/orderer/orderer.genesis.block
+      - /home/ravi/mbeMarket/test-network/organizations/ordererOrganizations/mbemarket.com/orderers/orderer2.mbemarket.com/msp:/var/hyperledger/orderer/msp
+      - /home/ravi/mbeMarket/test-network/organizations/ordererOrganizations/mbemarket.com/orderers/orderer2.mbemarket.com/tls/:/var/hyperledger/orderer/tls
+      - orderer2mbemarketcom:/var/hyperledger/production/orderer
     ports:
       - 8050:7050
     networks:
@@ -98,7 +98,7 @@ services:
         aliases:
           - orderer2.mbemarket.com
 
-  orderer3examplecom:
+  orderer3mbemarketcom:
     deploy:
       placement:
         constraints:
@@ -126,10 +126,10 @@ services:
     working_dir: /opt/gopath/src/github.com/hyperledger/fabric
     command: orderer
     volumes:
-      - /home/ubuntu/hlf-docker-swarm/test-network/system-genesis-block/genesis.block:/var/hyperledger/orderer/orderer.genesis.block
-      - /home/ubuntu/hlf-docker-swarm/test-network/organizations/ordererOrganizations/mbemarket.com/orderers/orderer3.mbemarket.com/msp:/var/hyperledger/orderer/msp
-      - /home/ubuntu/hlf-docker-swarm/test-network/organizations/ordererOrganizations/mbemarket.com/orderers/orderer3.mbemarket.com/tls/:/var/hyperledger/orderer/tls
-      - orderer3examplecom:/var/hyperledger/production/orderer
+      - /home/ravi/mbeMarket/test-network/system-genesis-block/genesis.block:/var/hyperledger/orderer/orderer.genesis.block
+      - /home/ravi/mbeMarket/test-network/organizations/ordererOrganizations/mbemarket.com/orderers/orderer3.mbemarket.com/msp:/var/hyperledger/orderer/msp
+      - /home/ravi/mbeMarket/test-network/organizations/ordererOrganizations/mbemarket.com/orderers/orderer3.mbemarket.com/tls/:/var/hyperledger/orderer/tls
+      - orderer3mbemarketcom:/var/hyperledger/production/orderer
     ports:
       - 9050:7050
     networks:
@@ -137,7 +137,7 @@ services:
         aliases:
           - orderer3.mbemarket.com
 
-  orderer4examplecom:
+  orderer4mbemarketcom:
     deploy:
       placement:
         constraints:
@@ -165,10 +165,10 @@ services:
     working_dir: /opt/gopath/src/github.com/hyperledger/fabric
     command: orderer
     volumes:
-      - /home/ubuntu/hlf-docker-swarm/test-network/system-genesis-block/genesis.block:/var/hyperledger/orderer/orderer.genesis.block
-      - /home/ubuntu/hlf-docker-swarm/test-network/organizations/ordererOrganizations/mbemarket.com/orderers/orderer4.mbemarket.com/msp:/var/hyperledger/orderer/msp
-      - /home/ubuntu/hlf-docker-swarm/test-network/organizations/ordererOrganizations/mbemarket.com/orderers/orderer4.mbemarket.com/tls/:/var/hyperledger/orderer/tls
-      - orderer4examplecom:/var/hyperledger/production/orderer
+      - /home/ravi/mbeMarket/test-network/system-genesis-block/genesis.block:/var/hyperledger/orderer/orderer.genesis.block
+      - /home/ravi/mbeMarket/test-network/organizations/ordererOrganizations/mbemarket.com/orderers/orderer4.mbemarket.com/msp:/var/hyperledger/orderer/msp
+      - /home/ravi/mbeMarket/test-network/organizations/ordererOrganizations/mbemarket.com/orderers/orderer4.mbemarket.com/tls/:/var/hyperledger/orderer/tls
+      - orderer4mbemarketcom:/var/hyperledger/production/orderer
     ports:
       - 10050:7050
     networks:
@@ -176,7 +176,7 @@ services:
         aliases:
           - orderer4.mbemarket.com
 
-  orderer5examplecom:
+  orderer5mbemarketcom:
     deploy:
       placement:
         constraints:
@@ -204,10 +204,10 @@ services:
     working_dir: /opt/gopath/src/github.com/hyperledger/fabric
     command: orderer
     volumes:
-      - /home/ubuntu/hlf-docker-swarm/test-network/system-genesis-block/genesis.block:/var/hyperledger/orderer/orderer.genesis.block
-      - /home/ubuntu/hlf-docker-swarm/test-network/organizations/ordererOrganizations/mbemarket.com/orderers/orderer5.mbemarket.com/msp:/var/hyperledger/orderer/msp
-      - /home/ubuntu/hlf-docker-swarm/test-network/organizations/ordererOrganizations/mbemarket.com/orderers/orderer5.mbemarket.com/tls/:/var/hyperledger/orderer/tls
-      - orderer5examplecom:/var/hyperledger/production/orderer
+      - /home/ravi/mbeMarket/test-network/system-genesis-block/genesis.block:/var/hyperledger/orderer/orderer.genesis.block
+      - /home/ravi/mbeMarket/test-network/organizations/ordererOrganizations/mbemarket.com/orderers/orderer5.mbemarket.com/msp:/var/hyperledger/orderer/msp
+      - /home/ravi/mbeMarket/test-network/organizations/ordererOrganizations/mbemarket.com/orderers/orderer5.mbemarket.com/tls/:/var/hyperledger/orderer/tls
+      - orderer5mbemarketcom:/var/hyperledger/production/orderer
     ports:
       - 11050:7050
     networks:
@@ -215,7 +215,7 @@ services:
         aliases:
           - orderer5.mbemarket.com
 
-  peer0org1examplecom:
+  peer0org1mbemarketcom:
     deploy:
       placement:
         constraints:
@@ -251,9 +251,9 @@ services:
       - CORE_PEER_TLS_CLIENTAUTHREQUIRED=false
     volumes:
       - /var/run/:/host/var/run/
-      - /home/ubuntu/hlf-docker-swarm/test-network/organizations/peerOrganizations/org1.mbemarket.com/peers/peer0.org1.mbemarket.com/msp:/etc/hyperledger/fabric/msp
-      - /home/ubuntu/hlf-docker-swarm/test-network/organizations/peerOrganizations/org1.mbemarket.com/peers/peer0.org1.mbemarket.com/tls:/etc/hyperledger/fabric/tls
-      - peer0org1examplecom:/var/hyperledger/production
+      - /home/ravi/mbeMarket/test-network/organizations/peerOrganizations/org1.mbemarket.com/peers/peer0.org1.mbemarket.com/msp:/etc/hyperledger/fabric/msp
+      - /home/ravi/mbeMarket/test-network/organizations/peerOrganizations/org1.mbemarket.com/peers/peer0.org1.mbemarket.com/tls:/etc/hyperledger/fabric/tls
+      - peer0org1mbemarketcom:/var/hyperledger/production
     working_dir: /opt/gopath/src/github.com/hyperledger/fabric/peer
     command: peer node start
     ports:
@@ -263,7 +263,7 @@ services:
         aliases:
           - peer0.org1.mbemarket.com
 
-  peer0org2examplecom:
+  peer0org2mbemarketcom:
     deploy:
       placement:
         constraints:
@@ -299,9 +299,9 @@ services:
       - CORE_PEER_TLS_CLIENTAUTHREQUIRED=false
     volumes:
       - /var/run/:/host/var/run/
-      - /home/ubuntu/hlf-docker-swarm/test-network/organizations/peerOrganizations/org2.mbemarket.com/peers/peer0.org2.mbemarket.com/msp:/etc/hyperledger/fabric/msp
-      - /home/ubuntu/hlf-docker-swarm/test-network/organizations/peerOrganizations/org2.mbemarket.com/peers/peer0.org2.mbemarket.com/tls:/etc/hyperledger/fabric/tls
-      - peer0org2examplecom:/var/hyperledger/production
+      - /home/ravi/mbeMarket/test-network/organizations/peerOrganizations/org2.mbemarket.com/peers/peer0.org2.mbemarket.com/msp:/etc/hyperledger/fabric/msp
+      - /home/ravi/mbeMarket/test-network/organizations/peerOrganizations/org2.mbemarket.com/peers/peer0.org2.mbemarket.com/tls:/etc/hyperledger/fabric/tls
+      - peer0org2mbemarketcom:/var/hyperledger/production
     working_dir: /opt/gopath/src/github.com/hyperledger/fabric/peer
     command: peer node start
     ports:
@@ -311,7 +311,7 @@ services:
         aliases:
           - peer0.org2.mbemarket.com
 
-  peer0org3examplecom:
+  peer0org3mbemarketcom:
     deploy:
       placement:
         constraints:
@@ -347,9 +347,9 @@ services:
       - CORE_PEER_TLS_CLIENTAUTHREQUIRED=false
     volumes:
       - /var/run/:/host/var/run/
-      - /home/ubuntu/hlf-docker-swarm/test-network/organizations/peerOrganizations/org3.mbemarket.com/peers/peer0.org3.mbemarket.com/msp:/etc/hyperledger/fabric/msp
-      - /home/ubuntu/hlf-docker-swarm/test-network/organizations/peerOrganizations/org3.mbemarket.com/peers/peer0.org3.mbemarket.com/tls:/etc/hyperledger/fabric/tls
-      - peer0org3examplecom:/var/hyperledger/production
+      - /home/ravi/mbeMarket/test-network/organizations/peerOrganizations/org3.mbemarket.com/peers/peer0.org3.mbemarket.com/msp:/etc/hyperledger/fabric/msp
+      - /home/ravi/mbeMarket/test-network/organizations/peerOrganizations/org3.mbemarket.com/peers/peer0.org3.mbemarket.com/tls:/etc/hyperledger/fabric/tls
+      - peer0org3mbemarketcom:/var/hyperledger/production
     working_dir: /opt/gopath/src/github.com/hyperledger/fabric/peer
     command: peer node start
     ports:
